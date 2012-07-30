@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "lib/molasses_jar.rb",
     "lib/molasses_jar/extensions.rb",
     "lib/molasses_jar/helpers.rb",
+    "molasses_jar.gemspec",
     "spec/molasses_jar_spec.rb",
     "spec/spec_helper.rb"
   ]
