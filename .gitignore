@@ -32,3 +32,4 @@ pkg
 # For MacOS:
 #
 .DS_Store
+.rspec
