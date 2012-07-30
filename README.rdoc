@@ -8,7 +8,9 @@ MolassesJar will add simple honeypot verification to any model you wish. It crea
 
 <tt>
 class ContactForm < ActiveRecord::Base
-	include MolassesJar::Extensions
+
+  include MolassesJar::Extensions
+
 end
 </tt>
 
