@@ -33,3 +33,4 @@ pkg
 #
 .DS_Store
 .rspec
+Gemfile.lock
