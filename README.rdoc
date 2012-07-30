@@ -1,6 +1,8 @@
 = molasses_jar
 
-Description goes here.
+A simple ActiveRecord extension for creating honeypot style captchas.
+
+UNDER CONSTRUCTION
 
 == Contributing to molasses_jar
  
