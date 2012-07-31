@@ -3,12 +3,19 @@ module MolassesJar
 	  extend ActiveSupport::Concern
 
 	  included do
-	    attr_accessor :molasses_jar
+	    attr_accessor :molasses_jar, :spam
 
-			validate :is_spam?
+	    scope :spammy, where(:spam => true)	    
+	    scope :not_spammy, where(:spam => false)
 
-			def is_spam?
-				errors.add(:molasses_jar, "Those bees sure like molasses!") if self.molasses_jar.present?
+			validate :mark_as_spam?
+
+			def mark_as_spam?
+				self.spam = true if self.molasses_jar.present?
+			end
+			
+			def spam?
+				self.spam
 			end
 	  end
 	end
