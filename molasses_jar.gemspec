@@ -9,18 +9,18 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["mindtonic"]
-  s.date = "2012-07-30"
+  s.date = "2012-07-31"
   s.description = "A honeypot style captcha extension for ActiveRecord. Simple one-line inclusion in the model combined with a simple form field should trap the bad guys in the molasses."
   s.email = "mindtonic@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/molasses_jar.rb",
