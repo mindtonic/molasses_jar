@@ -1,6 +1,8 @@
 # molasses_jar
 
-A simple ActiveRecord extension for creating honeypot style captchas.
+A simple ActiveRecord extension for creating inverse captchas using the Honeypot pattern.
+
+An inverse captcha uses a specific form field that the user does not see, but bots and spiders will.  If a value is set on the input, then the model is marked as being either spam or invalid depending on how you chose to implement the gem.
 
 ## Nuts and Bolts
 
@@ -21,9 +23,9 @@ If it does not find a ```spam``` attribute on your model, it will add an error t
 Generate a migration to add the spam attribute to your model. It is recommended that you index the attribute sice it will appear in a where clause through the included scope
 
 	def change
-		add_column :contact_forms, :spam, :boolean, :default #> false
+		add_column :contact_forms, :spam, :boolean, :default => false
 		add_index :contact_forms, :spam
-		ContactForm.update_all(:spam #> false)
+		ContactForm.update_all(:spam => false)
 	end
 
 ### Add the Extensions to your Model
@@ -39,7 +41,7 @@ You will need to add an input to your object's form with the attribute :molasses
 HTML/HAML
 
 	= form.label :molasses_jar, "If you are a human, please leave this field blank", :class => "agglutinative"
-	= form.text_field :molasses_jar, :class #> "agglutinative"
+	= form.text_field :molasses_jar, :class => "agglutinative"
 
 CSS
 
