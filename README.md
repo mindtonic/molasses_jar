@@ -38,14 +38,19 @@ You will need to add an input to your object's form with the attribute :molasses
 
 HTML/HAML
 
-	# form.label :molasses_jar, "If you are a human, please leave this field blank", :class #> "agglutinative"
-	# form.text_field :molasses_jar, :class #> "agglutinative"
+	= form.label :molasses_jar, "If you are a human, please leave this field blank", :class => "agglutinative"
+	= form.text_field :molasses_jar, :class #> "agglutinative"
 
 CSS
 
 	.agglutinative {
 		display: none;
 	}
+
+## Testing
+
+Specs are current. Please refer to spec/molasses_jar_spec.rb for testing examples. More to come soon.
+
 
 ## Coming Soon
 
