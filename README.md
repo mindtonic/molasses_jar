@@ -6,14 +6,11 @@ A simple ActiveRecord extension for creating honeypot style captchas.
 
 MolassesJar will add simple honeypot verification to any model you wish. It creates an attribute called :molasses_jar on the desired object and then checks to see if there is a value assigned to it. If there is, then the object does not validate. You will need to add an input to your objects form with the attribute :molasses_jar and then using your css, either display: none or move the form off the screen using absolute positioning.
 
-<tt>
-class ContactForm < ActiveRecord::Base
+	class ContactForm < ActiveRecord::Base  
+		include MolassesJar::Extensions  
+	end
 
-  include MolassesJar::Extensions
-
-end
-</tt>
-
+MolassesJar will look for a boolean attribute called ```spam``` on your model.  If it finds it, it will update the attribute to be true if it thinks the record is being submitted by a robot. This method prevents losing legitimate content.
 
 Coming Soon:
 
@@ -25,8 +22,8 @@ Coming Soon:
 
 == Interesting Reads on the Honeypot Approach
 
-*http://haacked.com/archive/2007/09/11/honeypot-captcha.aspx/
-*http://www.londonswebdesign.com/articles/Web-articles-Honeypot-CAPTCHA-vs-Spambots.html
+* http://haacked.com/archive/2007/09/11/honeypot-captcha.aspx/
+* http://www.londonswebdesign.com/articles/Web-articles-Honeypot-CAPTCHA-vs-Spambots.html
 
 == Contributing to molasses_jar
  
