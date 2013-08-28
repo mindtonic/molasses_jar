@@ -15,7 +15,7 @@ describe MolassesJar do
 			it "should initialize as nil" do
 				@model.molasses_jar.nil?.should be true
 			end
-			
+
 			it "should not have a spam attribute" do
 				@model.has_spam_attribute?.should be false
 			end
@@ -43,7 +43,7 @@ describe MolassesJar do
 			it "should return true for spam?" do
 				@model.spam?.should be true
 			end
-			
+
 			it "should have caught_something?" do
 				@model.caught_something?.should be true
 			end
@@ -61,7 +61,7 @@ describe MolassesJar do
 			it "should return false for spam?" do
 				@model.spam?.should be false
 			end
-			
+
 			it "should not have caught_something?" do
 				@model.caught_something?.should be false
 			end
@@ -81,7 +81,7 @@ describe MolassesJar do
 			it "should initialize as nil" do
 				@model.molasses_jar.nil?.should be true
 			end
-			
+
 			it "should have a spam attribute" do
 				@model.has_spam_attribute?.should be true
 			end
@@ -117,7 +117,7 @@ describe MolassesJar do
 			it "should return true for spam?" do
 				@model.spam?.should be true
 			end
-			
+
 			it "should have caught_something?" do
 				@model.caught_something?.should be true
 			end
@@ -139,7 +139,7 @@ describe MolassesJar do
 			it "should return false for spam?" do
 				@model.spam?.should be (false || nil)
 			end
-			
+
 			it "should not have caught_something?" do
 				@model.caught_something?.should be false
 			end
