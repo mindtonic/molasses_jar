@@ -5,8 +5,8 @@ module MolassesJar
     included do
       attr_accessor :molasses_jar
 
-      scope :spammy, where(:spam => true)
-      scope :not_spammy, where(:spam => false)
+      scope :spammy, -> { where(:spam => true) }
+      scope :not_spammy, -> { where(:spam => false) }
 
       validate :mark_as_spam?
 
